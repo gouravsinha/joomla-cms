@@ -23,7 +23,7 @@ $fieldsets = $this->form->getFieldsets();
 	Joomla.submitbutton = function(task)
 	{
 		if (task == 'user.cancel' || document.formvalidator.isValid(document.id('user-form')))
-		{
+		{        <?php echo $this->form->getField('body')->save(); ?>
 			Joomla.submitform(task, document.getElementById('user-form'));
 		}
 	}
